@@ -1,0 +1,164 @@
+What is points in Agile? 
+A story point is a metric used in agile project management and development to determine (or estimate) the difficulty of implementing a given story. ... 
+n simple terms, it is a number that tells the team about the difficulty level of the story. Difficulty could be related to complexities, risks, and efforts involved.
+
+Code coverage is a measurement of what percentage of program source code is being executed by your tests. Code coverage is a nice to have, but in no case make code coverage ultimate goal!
+Code coverage is a useful metric to check what part of the code your tests are exercising.
+Parameters	Code Coverage	
+Definition	Code coverage term used when application code is exercised when an application is running.	Test coverage means overall test-plan.
+Goal	Code coverage metrics can help the team monitor their automated tests.
+
+
+Protractor scirpting language no complication like java 
+
+2.https://www.tutorialspoint.com/protractor/protractor_debugging.htm
+browser.pause();
+Type C for Moving Forward
+Whenever a command has exhausted, we must type C to move forward. If you will not type C, the test will not run the full code and it will fail due to Jasmine time out error.
+
+Type repl for entering interactive mode
+The benefit of interactive mode is that we can send the WebDriver commands to our browser. If we want to enter into the interactive mode, then type repl.
+
+Type Ctrl-C for exiting and continuing the tests
+For exiting the test from pause state and continuing the test from where it has stopped, we need to type Ctrl-C.
+browser.debugger();
+It uses the node debugger to debug the test code. For running the above command, we must type the following command in a separate command prompt which has opened from the test project location ?
+2.What is the default browser supported by protractor
+Protractor supports the two latest major versions of Chrome, Firefox, Safari, and IE.
+3.
+Add x before it{}
+4.
+// Find an element using a css selector.
+by.css('.myclass')
+
+// Find an element with the given id.
+by.id('myid')
+
+// Find an element using an input name selector.
+by.name('field_name')
+
+// Find an element with a certain ng-model.
+// Note that at the moment, this is only supported for AngularJS apps.
+by.model('name')
+
+// Find an element bound to the given variable.
+// Note that at the moment, this is only supported for AngularJS apps.
+by.binding('bindingname')
+
+5.How you perform cross platform testing in protractor?
+exports.config = {
+  seleniumAddress: 'http://localhost:4444/wd/hub',
+  specs: ['calculator_spec.js'],
+  multiCapabilities: [{
+    'browserName': 'chrome',
+  },
+  {
+    'browserName': 'firefox'
+  }],
+  SELENIUM_PROMISE_MANAGER: false
+}
+6.What are the framework supported by protractor?
+
+Protractor is a Node. js program that supports test frameworks like Jasmine, Mocha, and Cucumber
+BDD
+POM
+DDM
+Modular Testing Framework:
+Data-driven Framework:
+Keyword Driven Testing Framework:
+Hybrid Driven Testing Framework:
+
+.How you do reporting in protractor?
+many available i have used winson 
+
+8.Explain your conf.js and spec files in detail
+will have configuration and screen shots suites and broswer time wout 
+direct connatcion
+spec wil have the test cases and process to done in it 
+
+What framework you used in your protractor project
+POM and jasimine
+How to handle parallel testing in protractor.?
+multiCapabilities: [{
+  'browserName': 'chrome'
+}, {
+  'browserName': 'chrome'
+}]
+
+1.How do you log errors in protractor?
+using winston logger
+ logger.info("customer added ......");
+  logger.error("Test failed:alert message different")
+12.How do you perform data driven testing using protractor
+jsonfile 
+{
+    "url":"http://www.way2automation.com/angularjs-protractor/banking/#/login",
+    "userData":{
+        "FirstName":"Priya",
+        "LastNAme":"Radhakrishnan",
+        "PostCode":"92127",
+        "delete":"harry"
+    },
+13.Can we perform group testing/suite level execution in protractor? Explain
+protractor .\conf.js --suite customerLogin
+  suites: {
+        E2E:['spec.js'],
+        customerLogin:['spec1.js']
+      },
+
+14.
+ element.all(by.options('value for (key, value) in operators')).then(function(items){
+        items[index].click();
+and async
+
+15.What are the differences between protractor and selenium?
+both testing tool
+protractor used to angukar web based 
+have spl location by model by binding 
+protractor language java script only 
+frame work jasmine mocha 
+selenium testng 
+selenium t test web application
+Selenium's performance is faster for a non-Angular web application.
+16.How you perform cross browser testing in protractor?
+same
+17.How you handle web based pop up in protractor
+ browser.switchTo().alert();
+alert.accept
+8.Is protractor supports non angular based web application automation? How?
+yes using the differebnt locators 
+
+browser.ignoreSynchronization = true;
+browser.get('http://localhost:8000/login.html');
+
+element(by.id('username')).sendKeys('Jane');
+element(by.id('password')).sendKeys('1234');
+element(by.id('clickme')).click();
+19.Is it necessary to start the selenium standalone server in protractor all the time?
+no when ur using chrome driver
+20How protractor helps in automation?
+The Protractor is an automation testing tool for web applications testing; combining powerful technologies such as Jasmine, Selenium Webdriver, Node. js etc. The Protractor testing tool is an end to end behavior-driven testing framework designed keeping Angular JS applications in mind.
+Protractor is an end-to-end testing framework for AngularJS applications
+Angular JS applications have some extra HTML attributes like ng-repeater, ng-controller, ng-model..,
+21.What are the advantages of protractor?
+Advantages of Protractor:
+It has default waits which waits for angular which is not present in selenium webdriver. Easy to write and manage page objects. If your application is angular based then it is better to go with protractor. It supports behavior driven frameworks jasmine, mocha, cucumber etc.
+
+
+Protractor runs on top of the selenium webdriver. Hence all the capabilities of webdriver are supported in protractor.
+
+It has extra locators compared to selenium webdriver those are model,repeater, binding etc.
+
+It has default waits which waits for angular which is not present in selenium webdriver.
+
+Easy to write and manage page objects.
+
+If your application is angular based then it is better to go with protractor.
+
+It supports behavior driven frameworks jasmine, mocha, cucumber etc.
+
+Image comparison is very easy in protractor and it works great.
+
+Running automation script in multiple machine is achieved in easy way in protractor.
+
+
